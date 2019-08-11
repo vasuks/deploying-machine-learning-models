@@ -7,3 +7,4 @@ packages/regression_model
 *.log
 .git
 .gitignore
+.vscode/
