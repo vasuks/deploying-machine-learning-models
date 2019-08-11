@@ -60,6 +60,7 @@ jobs:
             . venv/bin/activate
             #pip install --upgrade pip
             pip install --upgrade pip==19.1
+            pip install -r packages/ml_api/pip_requirements.txt
             pip install -r packages/ml_api/requirements.txt
             py.test -vv packages/ml_api/tests -m "not differential"
       - save_cache:
@@ -108,6 +109,7 @@ jobs:
           command: |
             . venv/bin/activate
             pip install --upgrade pip==19.1
+            pip install -r packages/ml_api/pip_requirements.txt
             pip install -r packages/ml_api/requirements.txt
             py.test -vv packages/ml_api/tests -m differential
 
