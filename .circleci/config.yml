@@ -22,3 +22,6 @@ workflows:
   test-all:
     jobs:
       - test_regression_model
+        filters:
+          branches:
+            only: test_branch
